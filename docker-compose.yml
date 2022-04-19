@@ -1,0 +1,5 @@
+version '3'
+
+services:
+  django:
+    image: django:1.10.4-python3
