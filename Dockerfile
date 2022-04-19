@@ -1,10 +1,10 @@
-FROM python:3.8
+FROM python:3.9.12-alpine3.15
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         postgresql-client \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install django
+    # && pip install django
 
 WORKDIR /usr/src/app
 COPY req.txt ./
