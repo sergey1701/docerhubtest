@@ -35,4 +35,4 @@ jobs:
           context: .
           file: ./docker-compose.yml
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/django-test:0.0.1
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/django-test:0.0.2
