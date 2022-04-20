@@ -5,8 +5,6 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    # command: python manage.py migrate 
-    # command: python manage.py runserver 0.0.0.0:8000
     image: sergey1701/django-test:0.0.5
     ports:
       - 8000:8000
