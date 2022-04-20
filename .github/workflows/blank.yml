@@ -31,4 +31,4 @@ jobs:
         run: docker-compose up -d --build
 
       - name: Push Docker Conteiner
-        run: docker push sergey1701/django-test:0.0.3  
+        run: docker push sergey1701/django-test:0.0.4  
