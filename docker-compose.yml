@@ -2,9 +2,25 @@ version: '3'
 
 services:
   django:
+    volumes:
+      - static:/static
     build:
       context: ./
       dockerfile: Dockerfile
     image: sergey1701/django-test:0.0.5
     ports:
-      - 8000:8000
+      - 8000
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile    
+    volumes:
+      - static:/static
+    ports: 
+      - 8000:8000 
+    depends_on:
+      - django
+
+volumes:
+  static:      
