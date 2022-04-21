@@ -4,3 +4,4 @@ bucket/
 .gitignore
 Dockerfile
 docker-compose.yml
+app/db.sqlite3
