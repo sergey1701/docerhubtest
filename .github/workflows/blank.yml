@@ -4,9 +4,9 @@ name: Docker Hub CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ main, update-readme ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, update-readme ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,4 +34,4 @@ jobs:
         # uses: c-py/action-dotenv-to-setenv@v2
         # with:
         #   env-file: ./.env
-        run: docker push sergey1701/django-test:0.0.5
+        run: docker push sergey1701/django-test:0.0.6
